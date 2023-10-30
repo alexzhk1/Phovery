@@ -1,0 +1,65 @@
+header {
+    align-items: center;
+    flex-grow: 1;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    font-size: 1rem;
+}
+
+.Navbar {
+    height: var(--footer-size);
+    position: relative;
+    /* background: linear-gradient(270deg, #701732 0%, #9e2448 48%); */
+    background: linear-gradient(90deg, #2192ffd6 0%, #bd61ffee 100%);
+    box-sizing: border-box;
+    display: flex;
+    box-shadow: 0px 3px 4px 3px rgba(107, 107, 107, 0.188);
+    padding: 0 1em;
+    transition: all 0.3s;
+    z-index: 5;
+}
+
+.Phovery {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.Version {
+    margin-left: 1em;
+}
+
+.btsContainer {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 15px;
+    flex-direction: row;
+    height: 100%;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 100%;
+    padding: 0 5px 0 5px;
+}
+.button:hover{
+    background: var(--dark-red);
+}
+
+.closeSesionButton{
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    font-family: Montserrat-medium;
+}
+.closeSesionButton:hover{
+    background-color: var(--dark-red);
+}

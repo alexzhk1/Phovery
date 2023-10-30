@@ -1,0 +1,85 @@
+:global(body) {
+    min-height: 100vh;
+    margin: 0;
+    position: relative;
+  }
+  
+:global(body::after) {
+    content: "";
+    display: block;
+    height: var(--footer-size); 
+    /* Set same as footer's height for example 50px if the footer size is 50px */
+  }
+  footer {
+    position: absolute;
+    padding: 10px 0px;
+    color: #fff;
+    /* height: 50px; */ /* Now we dont need to add a related height to the footer*/
+    width: 100%;
+    z-index: 10;
+    bottom: 0px;
+    left: 0;
+    font-family: Montserrat-medium;
+  
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* background: linear-gradient(270deg, var(--dark-red) 0%, var(--soft-red) 48%); */
+    background: linear-gradient(90deg, #bd61ffee 0%, #2192ffd6 100%);
+    box-shadow: 0px 2px 4px 3px #6b6b6b30;
+  }
+  .section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1;
+    height: 100%;
+  }
+  
+  .first {
+    display: flex;
+    flex-direction: column;
+    gap: 5px
+  }
+  
+  .icons {
+    display: flex;
+    gap: 5px;
+    justify-content: space-evenly;
+    width: 50%;
+    max-width: 250px;
+  }
+  
+  .iconxd {
+    color: #fff;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  
+  a {
+    color: #fff;
+    font-size: var(--p);
+    margin: 0;
+  }
+
+  
+  @media (max-width: 800px) {
+    footer {
+        flex-direction: column;
+    }
+  
+    .section {
+        align-items: center;
+    }
+  
+    p, a {
+        color: #fff;
+        text-align: center;
+        font-size: var(--p-responsive);
+    }
+  }
+  
+  
