@@ -40,15 +40,13 @@ export const Footer = () => {
 						</a>
 					</div>
 				</div>
-				<div className="sectionsecond">
-					<a className="styles.text-footer-center" href="tel:55 XXXX XXXX"><p> tel:55 XXXX XXXX</p></a>
+				<div className="section second">
+					<a className="text-footer-center" href="tel:55 XXXX XXXX"><p> tel:55 XXXX XXXX</p></a>
 				</div>
 
 				
 				<div className="section third">
-					<a
-						
-					>
+					<a>
 						<p>Consulta nuestro aviso de privacidad</p>
 					</a>
 				</div>

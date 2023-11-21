@@ -30,7 +30,12 @@ export const Login = () => {
 
                 </div>
                 
-                <button className='btn-blue'>
+                <button 
+                    className='btn-blue'
+                    onClick={() => {
+                        console.log("prueba")
+                    }} 
+                >
                     
                     <p>Ingresar</p>
                 </button>
