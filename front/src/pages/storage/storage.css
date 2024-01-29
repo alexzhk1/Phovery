@@ -1,0 +1,11 @@
+.border-bottom {
+    
+    border-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+}
+
+.border-dashed {
+    border-style: dashed solid;
+    border-color: #e0e0e0;
+}

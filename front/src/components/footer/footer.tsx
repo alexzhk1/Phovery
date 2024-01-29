@@ -1,21 +1,36 @@
 import './footer.css'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 
 export const Footer = () => {
 
-	// Capturando el body
 	const root = window.document.body;
 
-	const [footerHeight, setHeigth] = useState(0);
 	const ref = useRef<HTMLDivElement>(null);
+
+	const [width, setWidth] = useState(0);
+  	const [height, setHeight] = useState(0);
+
+	useLayoutEffect(() => {
+		setWidth(ref.current.clientWidth);
+		setHeight(ref.current.clientHeight);
+
+		root.style.setProperty('--footer-size', height + "px");
+	}, [ref.current?.clientHeight]);
+	
 	useEffect(() => {
+		function handleWindowResize() {
+		  setWidth(ref.current.clientWidth);
+		  setHeight(ref.current.clientHeight);
+		  
+		}
 
-		setHeigth(ref.current?.clientHeight || 0);
-		
-		root.style.setProperty('--footer-size', footerHeight + "px");
-
-	}, [footerHeight]);
+		window.addEventListener('resize', handleWindowResize);
+	
+		return () => {
+		  	window.removeEventListener('resize', handleWindowResize);
+		};
+	}, []);
 
 	return (
 

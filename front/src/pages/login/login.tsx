@@ -1,4 +1,5 @@
 import './login.css'
+import Button from 'react-bootstrap/Button'
 
 export const Login = () => {
 
@@ -30,15 +31,20 @@ export const Login = () => {
 
                 </div>
                 
-                <button 
-                    className='btn-blue'
+                {/* <Button 
+                    // className='outline-primary'
                     onClick={() => {
                         console.log("prueba")
                     }} 
                 >
-                    
                     <p>Ingresar</p>
-                </button>
+                </Button> */}
+                <Button
+                    variant="outline-primary"
+                >
+                    Ingresar
+                </Button>
+                
                 
             </div>
         </div>
