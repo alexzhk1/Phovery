@@ -18,17 +18,20 @@ export const App = () => {
 		<>
 			
 			<Navbar/>
+			{/* <div className='main-app'> */}
+				<Routes>
+					<Route
+						path='/login'
+						element={<Login/>}
+					/>
+					<Route
+						path='/storage'
+						element={<Storage/>}
+					/>
+				</Routes>
+
+			{/* </div> */}
 		
-			<Routes>
-				<Route
-					path='/login'
-					element={<Login/>}
-				/>
-				<Route
-					path='/storage'
-					element={<Storage/>}
-				/>
-			</Routes>
 			<Footer/>
 
 		</>

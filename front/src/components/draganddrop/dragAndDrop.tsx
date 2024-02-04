@@ -10,7 +10,7 @@ export const DragAndDrop = ({
 	count,
 	formats
 }) => {
-	
+
 	const dropContainer = useRef(null);
 	const [dragging, setDragging] = useState(false);
 	const fileRef = useRef(null);
@@ -161,7 +161,7 @@ export const DragAndDrop = ({
 					<div className="mx-auto text-gray-400 mb-2">
 						<FaUpload size={18} />
 					</div>
-					<div className="text-[12px] font-normal text-gray-500">
+					<div className="text-[1.1rem] font-normal text-gray-500">
 						<input
 							className="opacity-0 hidden"
 							type="file"
@@ -180,7 +180,7 @@ export const DragAndDrop = ({
 						</span>{" "}
 						o arrastra y suelta
 					</div>
-					<div className="text-[10px] font-normal text-gray-500">
+					<div className="text-[1rem] font-normal text-gray-500">
 						Solo arhcivos PNG, JPG or JPEG
 					</div>
 				</div>
