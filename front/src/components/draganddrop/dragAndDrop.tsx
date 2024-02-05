@@ -4,7 +4,7 @@ import { BsX } from "react-icons/bs";
 import Swal from "sweetalert2";
 
 export const DragAndDrop = ({
-	ownerLicense,
+	toDrop,
 	onUpload,
 	onDelete,
 	count,
@@ -30,7 +30,7 @@ export const DragAndDrop = ({
 			return formats.some((format) => file.type.endsWith(`/${format}`));
 		});
 
-		if (ownerLicense.length >= count) {
+		if (toDrop.length >= count) {
 			showAlert(
 				"warning",
 				"Maximum Files",
@@ -113,7 +113,7 @@ export const DragAndDrop = ({
 				dropContainer.current.removeEventListener("dragleave", handleDragLeave);
 			}
 		};
-	}, [ownerLicense]);
+	}, [toDrop]);
 
 	const TopNotification = Swal.mixin({
 		toast: true,
@@ -186,9 +186,9 @@ export const DragAndDrop = ({
 				</div>
 			</div>
 
-			{ownerLicense.length > 0 && (
+			{toDrop.length > 0 && (
 				<div className="mt-4 grid grid-cols-2 gap-y-4 gap-x-4">
-					{ownerLicense.map((img, index) => (
+					{toDrop.map((img, index) => (
 						<div className="w-full px-3 py-3.5 rounded-md bg-slate-200 space-y-3">
 							<div className="flex justify-between">
 								<div className="w-[70%] flex justify-start items-center space-x-2">

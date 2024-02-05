@@ -17,17 +17,17 @@ export const Storage = () => {
         { id: 1, value: 15, color: "#38E54D", label: 'Videos' },
         { id: 2, value: 20, color: "#BD61FF", label: 'Otros' },
         { id: 3, value: 55, color: "#8E7B60", label: 'Disponible' },
-      ]
+    ];
 
-    const [ownerLicense, setOwnerLicense] = useState([]);
+    const [toDrop, setToDrop] = useState([]);
 
     function uploadFiles(f) {
-        setOwnerLicense([...ownerLicense, ...f]);
+        setToDrop([...toDrop, ...f]);
     }
 
     function deleteFile(indexImg) {
-        const updatedList = ownerLicense.filter((_, index) => index !== indexImg);
-        setOwnerLicense(updatedList);
+        const updatedList = toDrop.filter((_, index) => index !== indexImg);
+        setToDrop(updatedList);
     }
 
     return (
@@ -78,7 +78,7 @@ export const Storage = () => {
                         </h2>
                     </div>
                     <DragAndDrop
-                        ownerLicense={ownerLicense}
+                        toDrop={toDrop}
                         onUpload={uploadFiles}
                         onDelete={deleteFile}
                         count={2}
@@ -89,3 +89,4 @@ export const Storage = () => {
         </div>
     );
 }
+
