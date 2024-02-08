@@ -1,24 +1,17 @@
 import './App.css'
 import Footer from './components/footer/footer'
 import { Navbar } from './components/navbar/navbar'
-import { Route, Routes, useNavigate } from "react-router-dom";
-
+import { Route, Routes } from "react-router-dom";
 import { Login } from './pages/login/login'
 import { Storage } from './pages/storage/storage';
-import { useEffect } from 'react';
+import { Profile } from './pages/profile/profile';
+import { Albums } from './pages/albums/albums';
 
 export const App = () => {
 
-	let navigate = useNavigate();
-	
-	// useEffect(() => {
-	// 	navigate("/login");
-	// })
 	return (
 		<>
-			
 			<Navbar/>
-			{/* <div className='main-app'> */}
 				<Routes>
 					<Route
 						path='/login'
@@ -28,12 +21,16 @@ export const App = () => {
 						path='/storage'
 						element={<Storage/>}
 					/>
+					<Route
+						path='/profile'
+						element={<Profile/>}
+					/>
+					<Route
+						path='/albums'
+						element={<Albums/>}
+					/>
 				</Routes>
-
-			{/* </div> */}
-		
 			<Footer/>
-
 		</>
 	)
 }
